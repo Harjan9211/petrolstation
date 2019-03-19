@@ -1,7 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="home.aspx.cs" Inherits="home" %>
+
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head runat="server">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Petrol Allocation</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
@@ -21,22 +25,20 @@
 
 <script type="text/javascript">
 
-ddsmoothmenu.init({
-	mainmenuid: "templatemo_menu", //menu DIV id
-	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-	classname: 'ddsmoothmenu', //class added to menu's outer DIV
-	//customtheme: ["#1c5a80", "#18374a"],
-	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-})
+    ddsmoothmenu.init({
+        mainmenuid: "templatemo_menu", //menu DIV id
+        orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+        classname: 'ddsmoothmenu', //class added to menu's outer DIV
+        //customtheme: ["#1c5a80", "#18374a"],
+        contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+    })
 
 </script>
 
 <link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen" /> 
 <script type="text/JavaScript" src="js/slimbox2.js"></script> 
-
 </head>
 <body id="home">
-
 <div id="templatemo_wrapper">
 
 	<div id="templatemo_header">
@@ -68,12 +70,12 @@ ddsmoothmenu.init({
 		<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
         <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
         <script type="text/javascript">
-        $(window).load(function() {
-            $('#slider').nivoSlider({
-				controlNav:false,
-   			 directionNavHide: false
-			});
-        });
+            $(window).load(function () {
+                $('#slider').nivoSlider({
+                    controlNav: false,
+                    directionNavHide: false
+                });
+            });
         </script>
     </div><!-- END of templatemo_slider -->
     
@@ -135,7 +137,22 @@ ddsmoothmenu.init({
                     <span class="post_comment">10</span>
                     <div class="clear"></div>
 				</div>
-                <img class="img_border_b img_nom" src="images/blog/01.jpg" alt="Post Image 2" />
+             <p>  <iframe src="https://oilprice.com/" width="300" height="200">
+                
+            </iframe>
+            <form id="form1" runat="server">
+                <div>
+                <p>Longitude:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>Latitude:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></p>
+                    <p>
+                        <asp:Button ID="Button1" runat="server" Text="Show Location" OnClick="Button1_Click" /></p>
+                </div>
+                </form>
+               
+	 
+	
+    <iframe src="<% =x %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+             </p> 
+
                 <p></p>
                 <a class="more" href="#">More</a>
                 </div>
@@ -154,12 +171,22 @@ ddsmoothmenu.init({
                     <li><a href="#">Updation</a></li>
                     <li><a href="#">Assignments</a></li>
                     <li><a href="#">Updattions</a></li>
-                    <li><a href="#">Timely</a></li>
+                    <li><a href="payment.html">Payment</a></li>
+
                 </ul>
                 <a href="#" class="more">More</a>
 			</div>
             <div class="testimonial">
-            	<p class="testimonial_text">Fuel Work </p>
+            	 
+               
+    <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+	<blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+		<a href="https://www.facebook.com/facebook">Facebook</a>
+	</blockquote>
+        </div>
+
+
+            	 
                 <p><strong>Students</strong></p>
             </div>
             <div class="sidebar_section">
@@ -222,5 +249,7 @@ ddsmoothmenu.init({
 </div> <!-- END of footer wrapper -->
  
 -->
+
+  
 </body>
 </html>
